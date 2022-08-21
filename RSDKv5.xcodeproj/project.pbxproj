@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C92834EA2631150A00D51CCE /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92834E92631150A00D51CCE /* Ogg.framework */; };
-		C92834EB2631150A00D51CCE /* Ogg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C92834E92631150A00D51CCE /* Ogg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9EC4726D28B1D60600A1100F /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4726B28B1D60600A1100F /* Ogg.framework */; };
+		9EC4726E28B1D60600A1100F /* Ogg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4726B28B1D60600A1100F /* Ogg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9EC4726F28B1D60600A1100F /* Theora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4726C28B1D60600A1100F /* Theora.framework */; };
+		9EC4727028B1D60600A1100F /* Theora.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4726C28B1D60600A1100F /* Theora.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9ED45E1128B2D2B600D64788 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED45E1028B2D2B600D64788 /* AppKit.framework */; };
 		C928353D26A3F28200D51CCE /* cocoaHelpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = C928353C26A3F28200D51CCE /* cocoaHelpers.mm */; };
 		C9555DAE2744FE06006E1353 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9555DAD2744FE06006E1353 /* tinyxml2.cpp */; };
-		C965667626BCF1E80076832A /* Theora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C965667526BCF1E80076832A /* Theora.framework */; };
-		C965667726BCF1E80076832A /* Theora.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C965667526BCF1E80076832A /* Theora.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C968886525DF3EF300BEE4B8 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C968886425DF3EF300BEE4B8 /* SDL2.framework */; };
 		C968886625DF3EF300BEE4B8 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C968886425DF3EF300BEE4B8 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C968886E25DF3F4C00BEE4B8 /* dictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C968886A25DF3F4B00BEE4B8 /* dictionary.cpp */; };
@@ -79,9 +80,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C92834EB2631150A00D51CCE /* Ogg.framework in Embed Frameworks */,
+				9EC4726E28B1D60600A1100F /* Ogg.framework in Embed Frameworks */,
 				C968886625DF3EF300BEE4B8 /* SDL2.framework in Embed Frameworks */,
-				C965667726BCF1E80076832A /* Theora.framework in Embed Frameworks */,
+				9EC4727028B1D60600A1100F /* Theora.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,12 +90,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C92834E92631150A00D51CCE /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/mac/libogg/macosx/Ogg.framework; sourceTree = "<group>"; };
+		9EC4726B28B1D60600A1100F /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/mac/Ogg.framework; sourceTree = "<group>"; };
+		9EC4726C28B1D60600A1100F /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/mac/Theora.framework; sourceTree = "<group>"; };
+		9ED45E1028B2D2B600D64788 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C928353B26A3F28200D51CCE /* cocoaHelpers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cocoaHelpers.hpp; path = dependencies/mac/cocoaHelpers.hpp; sourceTree = SOURCE_ROOT; };
 		C928353C26A3F28200D51CCE /* cocoaHelpers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cocoaHelpers.mm; path = dependencies/mac/cocoaHelpers.mm; sourceTree = SOURCE_ROOT; };
 		C9555DAC2744FE06006E1353 /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml2.h; path = dependencies/all/tinyxml2/tinyxml2.h; sourceTree = SOURCE_ROOT; };
 		C9555DAD2744FE06006E1353 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cpp; path = dependencies/all/tinyxml2/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
-		C965667526BCF1E80076832A /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/mac/libtheora/macosx/Theora.framework; sourceTree = "<group>"; };
 		C96881F125DF3C8700BEE4B8 /* RSDKv5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSDKv5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96881FE25DF3C8B00BEE4B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../dependencies/mac/Assets.xcassets; sourceTree = "<group>"; };
 		C968886425DF3EF300BEE4B8 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = dependencies/mac/SDL2.framework; sourceTree = "<group>"; };
@@ -221,9 +223,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C92834EA2631150A00D51CCE /* Ogg.framework in Frameworks */,
+				9EC4726D28B1D60600A1100F /* Ogg.framework in Frameworks */,
+				9ED45E1128B2D2B600D64788 /* AppKit.framework in Frameworks */,
 				C968886525DF3EF300BEE4B8 /* SDL2.framework in Frameworks */,
-				C965667626BCF1E80076832A /* Theora.framework in Frameworks */,
+				9EC4726F28B1D60600A1100F /* Theora.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +285,9 @@
 		C968886325DF3EF200BEE4B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C965667526BCF1E80076832A /* Theora.framework */,
-				C92834E92631150A00D51CCE /* Ogg.framework */,
+				9ED45E1028B2D2B600D64788 /* AppKit.framework */,
+				9EC4726B28B1D60600A1100F /* Ogg.framework */,
+				9EC4726C28B1D60600A1100F /* Theora.framework */,
 				C968886425DF3EF300BEE4B8 /* SDL2.framework */,
 			);
 			name = Frameworks;
@@ -837,6 +841,8 @@
 					"$(PROJECT_DIR)/dependencies/all",
 					"$(PROJECT_DIR)/dependencies/mac",
 					"$(PROJECT_DIR)/RSDKv5/",
+					"$(PROJECT_DIR)/dependencies/mac/Theora.framework/Headers/",
+					"$(PROJECT_DIR)/dependencies/mac/Ogg.framework/Headers/",
 				);
 				INFOPLIST_FILE = "$(PROJECT_DIR)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -872,6 +878,8 @@
 					"$(PROJECT_DIR)/dependencies/all",
 					"$(PROJECT_DIR)/dependencies/mac",
 					"$(PROJECT_DIR)/RSDKv5/",
+					"$(PROJECT_DIR)/dependencies/mac/Theora.framework/Headers/",
+					"$(PROJECT_DIR)/dependencies/mac/Ogg.framework/Headers/",
 				);
 				INFOPLIST_FILE = "$(PROJECT_DIR)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
