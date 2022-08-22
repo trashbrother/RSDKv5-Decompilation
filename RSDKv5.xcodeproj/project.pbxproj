@@ -12,6 +12,8 @@
 		9EC4726F28B1D60600A1100F /* Theora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4726C28B1D60600A1100F /* Theora.framework */; };
 		9EC4727028B1D60600A1100F /* Theora.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC4726C28B1D60600A1100F /* Theora.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9ED45E1128B2D2B600D64788 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED45E1028B2D2B600D64788 /* AppKit.framework */; };
+		9EF4B9D128B30C240057B4D0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9EF4B9D028B30C240057B4D0 /* Info.plist */; };
+		9EF4B9D628B3101D0057B4D0 /* Game.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 9EF4B9D228B30E1D0057B4D0 /* Game.dylib */; };
 		C928353D26A3F28200D51CCE /* cocoaHelpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = C928353C26A3F28200D51CCE /* cocoaHelpers.mm */; };
 		C9555DAE2744FE06006E1353 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9555DAD2744FE06006E1353 /* tinyxml2.cpp */; };
 		C968886525DF3EF300BEE4B8 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C968886425DF3EF300BEE4B8 /* SDL2.framework */; };
@@ -93,6 +95,8 @@
 		9EC4726B28B1D60600A1100F /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/mac/Ogg.framework; sourceTree = "<group>"; };
 		9EC4726C28B1D60600A1100F /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/mac/Theora.framework; sourceTree = "<group>"; };
 		9ED45E1028B2D2B600D64788 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9EF4B9D028B30C240057B4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = dependencies/mac/Info.plist; sourceTree = SOURCE_ROOT; };
+		9EF4B9D228B30E1D0057B4D0 /* Game.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = Game.dylib; path = dependencies/mac/Game.dylib; sourceTree = SOURCE_ROOT; };
 		C928353B26A3F28200D51CCE /* cocoaHelpers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cocoaHelpers.hpp; path = dependencies/mac/cocoaHelpers.hpp; sourceTree = SOURCE_ROOT; };
 		C928353C26A3F28200D51CCE /* cocoaHelpers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cocoaHelpers.mm; path = dependencies/mac/cocoaHelpers.mm; sourceTree = SOURCE_ROOT; };
 		C9555DAC2744FE06006E1353 /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml2.h; path = dependencies/all/tinyxml2/tinyxml2.h; sourceTree = SOURCE_ROOT; };
@@ -236,6 +240,8 @@
 		C928353A26A3F25D00D51CCE /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9EF4B9D228B30E1D0057B4D0 /* Game.dylib */,
+				9EF4B9D028B30C240057B4D0 /* Info.plist */,
 				C928353B26A3F28200D51CCE /* cocoaHelpers.hpp */,
 				C928353C26A3F28200D51CCE /* cocoaHelpers.mm */,
 			);
@@ -630,6 +636,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EF4B9D128B30C240057B4D0 /* Info.plist in Resources */,
+				9EF4B9D628B3101D0057B4D0 /* Game.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +834,7 @@
 				CODE_SIGN_ENTITLEMENTS = dependencies/mac/RSDKv5.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dependencies/mac",
@@ -836,6 +845,9 @@
 					"RETRO_REVISION=2",
 					"RSDK_USE_SDL2=1",
 					"DEBUG=1",
+					"MANIA_PREPLUS=1",
+					"RETRO_USE_MOD_LOADER=0",
+					"RSDK_AUTOBUILD=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/all",
@@ -849,6 +861,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependencies/mac",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RSDK.RSDKv5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -864,6 +881,7 @@
 				CODE_SIGN_ENTITLEMENTS = dependencies/mac/RSDKv5.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/dependencies/mac",
@@ -873,6 +891,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"RETRO_REVISION=2",
 					"RSDK_USE_SDL2=1",
+					"MANIA_PREPLUS=1",
+					"RETRO_USE_MOD_LOADER=0",
+					"RSDK_AUTOBUILD=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/all",
@@ -886,6 +907,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependencies/mac",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RSDK.RSDKv5;
 				PRODUCT_NAME = "$(TARGET_NAME)";

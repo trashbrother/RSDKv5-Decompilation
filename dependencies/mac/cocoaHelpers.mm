@@ -28,6 +28,14 @@ const char* getResourcesPath(void)
     }
 }
 
+const char* getBundleResourcePath(void){
+    @autoreleasepool
+    {
+        NSString* appFolder = NSBundle.mainBundle.resourcePath;
+        return (char*)[appFolder UTF8String];
+    }
+}
+
 const float getMacScreenScale(void){
     return NSScreen.mainScreen.backingScaleFactor;
 }
