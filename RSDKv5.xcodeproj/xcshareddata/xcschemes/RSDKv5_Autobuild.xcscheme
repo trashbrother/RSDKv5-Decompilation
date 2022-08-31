@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9E3BADCA28BAD65D0052E1D4"
-               BuildableName = "RSDKv5 copy.app"
+               BuildableName = "RSDKv5_Autobuild.app"
                BlueprintName = "RSDKv5_Autobuild"
                ReferencedContainer = "container:RSDKv5.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9E3BADCA28BAD65D0052E1D4"
-            BuildableName = "RSDKv5 copy.app"
+            BuildableName = "RSDKv5_Autobuild.app"
             BlueprintName = "RSDKv5_Autobuild"
             ReferencedContainer = "container:RSDKv5.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9E3BADCA28BAD65D0052E1D4"
-            BuildableName = "RSDKv5 copy.app"
+            BuildableName = "RSDKv5_Autobuild.app"
             BlueprintName = "RSDKv5_Autobuild"
             ReferencedContainer = "container:RSDKv5.xcodeproj">
          </BuildableReference>
