@@ -5,7 +5,7 @@
 #include "cocoaHelpers.hpp"
 #include <sys/stat.h>
 
-const char* getResourcesPath(void)
+void getResourcesPath(char* buffer, int bufferSize)
 {
     @autoreleasepool
     {
@@ -16,15 +16,17 @@ const char* getResourcesPath(void)
         if([NSFileManager.defaultManager fileExistsAtPath:dataFile] ||
            [NSFileManager.defaultManager fileExistsAtPath:settingsFile] ||
            [NSFileManager.defaultManager fileExistsAtPath:dataFolder]){
-            return (char*)[appFolder UTF8String];
+            [appFolder getCString:buffer maxLength:bufferSize encoding:NSUTF8StringEncoding];
+            return;
         }
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
         NSString *applicationSupportDirectory = [paths firstObject];
         NSString* gameData = [applicationSupportDirectory stringByAppendingString:@"/RSDKv5"];
         if(![NSFileManager.defaultManager fileExistsAtPath:gameData]){
-            mkdir([gameData UTF8String], 0777);
+            mkdir([gameData cStringUsingEncoding:NSUTF8StringEncoding], 0777);
         }
-        return (char*)[gameData UTF8String];
+        [gameData getCString:buffer maxLength:bufferSize encoding:NSUTF8StringEncoding];
+        return;
     }
 }
 
