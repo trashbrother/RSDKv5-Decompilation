@@ -1211,7 +1211,8 @@ void RSDK::InitGameLink()
 #if RETRO_PLATFORM == RETRO_WIN
             strcpy_s(buffer, 0x100, gameLogicName);
 #elif RETRO_PLATFORM == RETRO_OSX
-        sprintf(buffer, "%s/%s", getBundleResourcePath(), gameLogicName);
+        getBundleResourcePath(buffer, sizeof(buffer));
+        sprintf(buffer, "%s/%s", buffer, gameLogicName);
 #else
         sprintf(buffer, "%s%s", SKU::userFileDir, gameLogicName);
 #endif

@@ -30,11 +30,11 @@ void getResourcesPath(char* buffer, int bufferSize)
     }
 }
 
-const char* getBundleResourcePath(void){
+void getBundleResourcePath(char* buffer, int bufferSize){
     @autoreleasepool
     {
         NSString* appFolder = NSBundle.mainBundle.resourcePath;
-        return (char*)[appFolder UTF8String];
+        [appFolder getCString:buffer maxLength:bufferSize encoding:NSUTF8StringEncoding];
     }
 }
 

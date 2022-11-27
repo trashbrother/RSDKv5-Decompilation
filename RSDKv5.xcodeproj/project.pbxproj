@@ -924,6 +924,7 @@
 					"$(PROJECT_DIR)/dependencies/mac/Theora.framework/Headers/",
 					"$(PROJECT_DIR)/dependencies/mac/Ogg.framework/Headers/",
 				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -934,6 +935,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RSDK.RSDKv5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -967,6 +969,7 @@
 					"$(PROJECT_DIR)/dependencies/mac/Theora.framework/Headers/",
 					"$(PROJECT_DIR)/dependencies/mac/Ogg.framework/Headers/",
 				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -977,6 +980,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RSDK.RSDKv5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 			};

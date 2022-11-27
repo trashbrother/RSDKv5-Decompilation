@@ -2,7 +2,7 @@
 #define COCOA_HELPERS_H
 
 void getResourcesPath(char* buffer, int bufferSize);
-const char* getBundleResourcePath(void);
+void getBundleResourcePath(char* buffer, int bufferSize);
 const float getMacScreenScale(void);
 
 #endif
